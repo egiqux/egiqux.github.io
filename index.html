@@ -1,84 +1,396 @@
 <!DOCTYPE html>
-<!-- saved from url=(0056) -->
-<html lang="en">
+<html lang="en-US" class="no-js">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-	<title>Page-Not-Found</title>
+  <!-- Title -->
+  <title>Homepage</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Required Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
-	<link rel="stylesheet" href="./assets/css/utilities.css">
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="assets/vendor/vegas/vegas.min.css">
 
-	<link href="./assets/fonts/google-fonts.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="assets/css/fonts.css">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+
+  <link rel="icon" href="assets/images/favicon.svg">
+
+  <script src="https://kit.fontawesome.com/2766bb6a87.js" crossorigin="anonymous"></script>
+
+  <style>
+    .content {
+      height: 200px;
+      width: 200px;
+      box-sizing: border-box;
+      margin: 10% auto;
+    }
+
+    #qrcode {
+      position: relative;
+    }
+  </style>
 </head>
 
-<body>
+<body class="slide-website">
 
-	<div id="preloader" class="preloader preloader-dark" style="display: none;">
-		<div class="loader-status">
-			<div class="circle-side"></div>
-		</div>
-	</div>
+  <!-- Loader -->
+  <div class="loader bg-dark">
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
 
-	<!-- Global Overlay -->
-	<div class="global-overlay">
-		<div class="overlay-inner bg-white opacity-90"></div>
-		<div class="overlay-inner shadow-inner-white-1 opacity-85"></div>
-		<div class="overlay-inner shadow-inner-white-2 opacity-85"></div>
-	</div>
+  <!-- Global Overlay -->
+  <div class="overlay overlay-global">
+    <div class="overlay-inner kenburns-background vegas-container" style="height: 812px;">
+      <div class="vegas-slide vegas-transition-swirlLeft2 vegas-transition-swirlLeft2-in"
+        style="transition: all 3000ms ease 0s;">
+        <div class="vegas-slide-inner"
+          style="background-image: url(&quot;assets/images/background.svg&quot;); background-color: rgba(0, 0, 0, 0); background-position: center center; background-size: cover;">
+        </div>
+      </div>
+      <div class="vegas-wrapper" style="overflow: visible; padding: 0px;"></div>
+    </div>
+    <div class="overlay-inner bg-dark opacity-70"></div>
+  </div>
 
-	<!-- Frame -->
-	<div class="frame bg-dark d-none d-lg-block">
-		<div class="frame-left"></div>
-		<div class="frame-right"></div>
-		<div class="frame-top"></div>
-		<div class="frame-bottom"></div>
-	</div>
+  <!-- Global Frame -->
+  <div class="global-frame border-dark opacity-20">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
 
-	<div class="site-container">
+  <!-- Site Navigation -->
+  <nav class="site-navbar navbar navbar-expand-xl navbar-dark p-xl-0">
+    <div class="site-navbar-overlay bg-dark opacity-50"></div>
+    <div class="container-xl flex-wrap">
+      <div class="navbar-header justify-content-xl-center">
+        <a class="navbar-brand" href="">
+          <img src="assets/images/logo-light.svg" alt="">
+        </a>
+        <button class="navbar-toggler-alternative" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-alternative-icon">
+            <span></span>
+          </span>
+        </button>
+      </div>
 
-		<!-- Site Header -->
-		<header class="site-header header-fixed d-flex justify-content-center">
-			<!-- Logo -->
-			<a href="#" class="logo">
-			</a>
-		</header>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav-container mx-auto px-xl-5">
+          <div class="navbar-nav-container-overlay border-dark opacity-20"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="moon">Moon</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vega">Vega</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="betelgeuse">Betelgeuse</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-		<section id="404" class="d-flex min-vh--100">
-			<div class="container align-self-center text-center">
-				<h1 class="display--1 mb-3">404</h1>
-				<p class="h3 mb-5">Sorry, but this page doesn't exist.</p>
-				<a href="#" class="btn btn-primary btn-shadow rounded-0">Back To Home</a>
-			</div>
-		</section>
+  <!-- Website Slider -->
+  <div class="website-slider">
+    <div class="website-slider-inner">
 
-		<!-- Site Footer -->
-		<footer class="site-footer footer-fixed footer-mobile-dark footer-dark">
-			<div class="container-fluid d-md-flex align-items-md-center justify-content-md-between">
-				<nav class="social-nav social-nav-pinned">
-					<ul>
-						<li><a href="#"></a></li>
-					</ul>
-				</nav>
-				<p class="mb-2 mb-xl-0">© 2020 - 2021</p>
-				<nav class="usefull-nav">
-					<ul>
-						<li><a href="#"></a></li>
-					</ul>
-				</nav>
-			</div>
-		</footer>
+      <!-- Slider Item - Home -->
+      <div class="website-slider-item" id="home">
 
-	</div>
+        <div class="website-slider-item-inner">
+          <div class="container align-self-center text-white text-center">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
 
-	<script src="./assets/vendor/jquery/jquery-3.5.1.min.js"></script>
-	<script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+                <h1 class="mb-5">
+                  <span class="font-weight-bold" data-toggle="typed"
+                    data-options='{"strings": ["So long as men can breathe", "or eyes can see"]}'></span>
+                </h1>
+                <p class="h4 text-center font-light mb-7">So long lives this, and this gives life to thee. </p>
+                <a href="#about" class="btn btn-white mr-3 scrollto">Learn more</a>
+                <button type="button" class="btn btn-soft-white" data-toggle="modal"
+                  data-target="#contributeModal">Contribute</button>
 
-	<script src="./assets/js/main.js"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Item - About -->
+      <div class="website-slider-item" id="about">
+
+        <div class="website-slider-item-inner">
+          <div class="container align-self-center text-center text-white">
+            <h2>About Us</h2>
+            <div class="divider bg-white mx-auto"></div>
+            <div class="row">
+              <div class="col-12 col-lg-10 mx-auto">
+
+                <div class="d-table mx-auto mb-7">
+                  <div class="nav nav-pills-modern nav-pills-modern-soft-light justify-content-center rounded"
+                    id="about-tab" role="tablist">
+                    <a class="nav-link active" id="tab-sameen-tab" data-toggle="pill" href="#tab-sameen" role="tab"
+                      aria-controls="tab-sameen" aria-selected="true">
+                      Sameen
+                    </a>
+                    <a class="nav-link" id="tab-roy-tab" data-toggle="pill" href="#tab-roy" role="tab"
+                      aria-controls="tab-roy" aria-selected="false">
+                      Roy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="tabContent">
+                  <div class="tab-pane fade show active" id="tab-sameen" role="tabpanel"
+                    aria-labelledby="tab-sameen-tab">
+
+                    <p>who this website is for, <s>may be</s> the cutest person in the world. She is so lovely and
+                      sweet. She is is so smart and knowledgeable. She so kind and humorous. And, she is my today and
+                      all of my tomorrows.</p>
+
+                  </div>
+                  <div class="tab-pane fade" id="tab-roy" role="tabpanel" aria-labelledby="tab-roy-tab">
+
+                    <p>who this website is by, know a little about building a website. I am similar to Sameen in some
+                      ways, and some are not. By convention, there may be information you want to know in the
+                      <a href="terms" class="text-white"><u>Terms of Service</u></a>.
+                    </p>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- End Website Slider -->
+
+  <!-- Site footer -->
+  <footer class="site-footer py-8 py-xl-0">
+    <div class="site-footer-overlay bg-dark opacity-50"></div>
+    <nav class="social-nav text-center">
+      <ul class="list d-inline-flex d-xl-block mb-4 mb-xl-0">
+        <li class="list-item m-0">
+          <a class="btn btn-icon btn-text-white a-qrcode" href="javascript:void(0)" tabindex="0" data-toggle="modal"
+            data-target="#QRcodeModal">
+            <i class="fas fa-qrcode btn-icon-inner"></i>
+          </a>
+        </li>
+        <li class="list-item m-0">
+          <a class="btn btn-icon btn-text-white a-weixin" href="javascript:void(0)" tabindex="0" data-toggle="modal"
+            data-target="#QRcodeModal">
+            <i class="fab fa-weixin btn-icon-inner"></i>
+          </a>
+        </li>
+        <li class="list-item m-0">
+          <a class="btn btn-icon btn-text-white a-qq" href="javascript:void(0)" tabindex="0">
+            <i class="fab fa-qq btn-icon-inner"></i>
+          </a>
+        </li>
+        <li class="list-item m-0">
+          <a class="btn btn-icon btn-text-white a-weibo" href="javascript:void(0)" tabindex="0">
+            <i class="fab fa-weibo btn-icon-inner"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright">
+      <div class="container text-center">
+        <p class="text-white">© 2020 - 2021 Sameen & Roy
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contribute Modal -->
+  <div class="modal fade" id="contributeModal" tabindex="-1" aria-labelledby="contributeAny" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <button type="button"
+          class="btn btn-sm btn-icon btn-primary position-absolute top-0 right-0 mt-n3 mr-n3 zindex-1"
+          data-dismiss="modal" aria-hidden="true">
+          <i class="fas fa-times btn-icon-inner"></i>
+        </button>
+
+        <!-- Modal Body -->
+        <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
+
+          <h2 id="contributeAny" class="mb-4">Contact Us<br /> Make a Contribution</h2>
+          <p class="mb-8">If you want to contribute to this website and make it better, your help is very welcome. You
+            can send us feedback and suggestions via email.</p>
+          <div class="contribute-form">
+            <form id="cf" name="cf">
+              <div class="form-process"></div>
+              <div class="form-group">
+                <input type="email" id="cf-email" name="cf-email" placeholder="Developer's Email Address"
+                  class="form-control required" value="royoyy@hotmail.com">
+              </div>
+              <input type="text" id="cf-botcheck" name="cf-botcheck" value="" class="form-control d-none">
+              <button class="btn btn-primary btn-block" type="submit" id="cf-submit" name="cf-submit"
+                onclick="cp1()">Copy
+                Email</button>
+            </form>
+            <div class="contribute-form-result"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- QR code Modal -->
+  <div class="modal fade" id="QRcodeModal" tabindex="-1" role="dialog" aria-labelledby="scanqrcode" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <button type="button"
+          class="btn btn-sm btn-icon btn-primary position-absolute top-0 right-0 mt-n3 mr-n3 zindex-1"
+          data-dismiss="modal" aria-hidden="true">
+          <i class="fas fa-times btn-icon-inner"></i>
+        </button>
+
+        <!-- Modal Body -->
+        <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
+
+          <h3 id="scanqrcode" class="mb-4">Scan the following QR code<span id='via'><br />via WeChat</span></h3>
+          <div id="content" class="content">
+            <div id="qrcode">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Libs JS -->
+  <script src="assets/vendor/jquery/jquery-3.5.1.min.js"></script>
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.validate.min.js"></script>
+  <script src="assets/vendor/jquery.form/jquery.form.min.js"></script>
+  <script src="assets/vendor/vegas/vegas.min.js"></script>
+  <script src="assets/vendor/typed/typed.min.js"></script>
+  <script src="assets/vendor/qrcode.min.js"></script>
+
+  <!-- Theme JS -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Slideshow Background
+    if ($('.overlay-global .overlay-inner').hasClass('kenburns-background')) {
+      var kenburnsDisplayBackdrops = false;
+      var kenburnsBackgrounds = [
+        { src: 'assets/images/background1.svg', valign: 'center' },
+        { src: 'assets/images/background2.svg', valign: 'center' },
+        { src: 'assets/images/background3.svg', valign: 'center' },
+        { src: 'assets/images/background2.svg', valign: 'center' }
+      ];
+
+      $('.overlay-global .overlay-inner.kenburns-background').vegas({
+        preload: true,
+        transition: 'swirlLeft2',
+        transitionDuration: 3000,
+        firstTransition: 'none',
+        timer: false,
+        delay: 6000,
+        slides: kenburnsBackgrounds,
+        walk: function (nb) {
+          if (kenburnsDisplayBackdrops === true) {
+            var backdrop;
+
+            backdrop = backdrops[nb];
+            backdrop.animation = 'kenburns';
+            backdrop.animationDuration = 10000;
+            backdrop.transition = 'fade';
+            backdrop.transitionDuration = 1000;
+
+            $('.overlay-global .overlay-inner.kenburns-background')
+              .vegas('options', 'slides', [backdrop])
+              .vegas('next');
+          }
+        }
+      });
+    }
+  </script>
+
+  <script>
+    // Generate QR code
+    var url = window.location.href;
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: url,
+      width: 200,
+      height: 200,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+    url = encodeURIComponent(url)
+    var desc = encodeURIComponent("A website for girlfriend");
+    var title = encodeURIComponent("Shall I compare thee to a summer's day?");
+    var topic = encodeURIComponent("#Sonnet 18#")
+    var picurl = encodeURIComponent("https://www.sameen.cn/assets/images/share.png");
+    var ShareTip = function () { }
+    // Share via QQ
+    ShareTip.prototype.share2qq = function (url, title, desc, picurl) {
+      var shareurl = 'https://connect.qq.com/widget/shareqq/index.html?url=' + url + '&desc=' + desc + '&title=' + title + '&pics=' + picurl + '&style=201&width=32&height=32';
+      window.open(shareurl, "_blank", "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes");
+    }
+    // Share via Weibo
+    ShareTip.prototype.share2weibo = function (url, title, picurl) {
+      var shareurl = 'https://service.weibo.com/share/share.php?url=' + url + '&title=' + title + topic + '&pic=' + picurl;
+      window.open(shareurl, "_blank", "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes");
+    }
+    $(".a-qrcode").on("click", function () {
+      if ($("#via").length > 0) {
+        $("#scanqrcode").after("<p id='vias'>To scan this code, you can use a QR scanner app on your phone, or some camera apps.</p>");
+        $("#via").remove();
+      }
+    })
+    $(".a-weixin").on("click", function () {
+      if ($("#vias").length > 0) {
+        $("#scanqrcode").append("<span id='via'><br />via WeChat</span>");
+        $("#vias").remove();
+      }
+    })
+    $(".a-qq").on("click", function () {
+      var share = new ShareTip();
+      share.share2qq(url, title, desc, picurl);
+    })
+    $(".a-weibo").on("click", function () {
+      var share = new ShareTip();
+      share.share2weibo(url, title, picurl);
+    })
+  </script>
 
 </body>
 
