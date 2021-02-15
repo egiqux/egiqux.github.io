@@ -1,0 +1,135 @@
+.title {
+    background-color: #08246B;
+    padding: 2px;
+}
+
+.purple {
+    color: #e83e8c;
+    text-shadow: 0 0 10px #ca61ae;
+}
+
+input {
+    background-color: transparent;
+    color: #66FF66;
+    text-shadow: 0 0 10px #33FF33;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    width: 90%;
+    padding: 5px 10px;
+}
+
+.prompt {
+    margin: 5px 10px;
+}
+
+.prompt-warning {
+    margin: 5px 10px;
+    color: #FF0000;
+    text-shadow: 0 0 10px #CC0000;
+}
+
+.prompt-status {
+    margin: 5px 10px;
+    color: rgba(255, 255, 255, .5);
+    text-shadow: 0 0 10px #000000;
+}
+
+.prompt-info {
+    margin: 5px 10px;
+    color: rgba(255, 255, 255, .7);
+    text-shadow: 0 0 10px #000000;
+}
+
+.line-14 {
+    width: 14ch;
+    border-right: 1ch solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter14 {
+    animation: typewriter14 2s steps(14) 0s 1 normal both,
+    blinkTextCursor 1s steps(14) 0s 2 normal;
+}
+
+@keyframes typewriter14 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 14ch;
+    }
+}
+
+.line-45 {
+    width: 45ch;
+    border-right: 1ch solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter45 {
+    animation: typewriter45 6s steps(45) 4s 1 normal both,
+    blinkTextCursor 1s steps(45) 4s 7 normal;
+}
+
+@keyframes typewriter45 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 45ch;
+    }
+}
+
+.line-48 {
+    width: 48ch;
+    border-right: 1ch solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter48 {
+    animation: typewriter48 6.5s steps(48) 7s 1 normal both,
+    blinkTextCursor 1s steps(48) 7s 7 normal;
+}
+
+@keyframes typewriter48 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 48ch;
+    }
+}
+
+.line-480 {
+    width: 48ch;
+    border-right: 1ch solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter480 {
+    animation: typewriter48 6.5s steps(48) 0s 1 normal both,
+    blinkTextCursor 1s steps(48) 0s 7 normal;
+}
+
+.fulfill {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.central {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

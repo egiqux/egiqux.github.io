@@ -1,0 +1,10 @@
+.content {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    margin: 10% auto;
+}
+
+#qrcode {
+    position: relative;
+}

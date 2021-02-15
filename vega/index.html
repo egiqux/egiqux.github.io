@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" id="hm">
+<head>
+    <meta charset="UTF-8">
+    <title>Vega Virtual Terminal</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="any" mask href="../assets/images/favicon.svg">
+
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <style>
+        /* Global */
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            color: rgba(255, 255, 255, .75);
+            font-family: 'Anonymous Pro', monospace;
+            background-color: #191919;
+        }
+
+        .line-12 {
+            width: 12ch;
+            border-right: 1ch solid transparent;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        /* Animation */
+        .anim-typewriter12 {
+            animation: typewriter12 1.5s steps(12) 1s 1 normal both,
+            blinkTextCursor 1s steps(12) 0s 3 normal;
+        }
+
+        @keyframes typewriter12 {
+            from {
+                width: 0;
+            }
+            to {
+                width: 12ch;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, .75);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        @keyframes stage3-animation-a {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .mono:lang(en-us), .mono {
+            font-family: Courier, Courier New;
+        }
+
+        :lang(zh-Hans) {
+            font-family: Songti SC;
+        }
+
+        .retro {
+            background-color: #282828;
+            color: #66FF66;
+            text-shadow: 0 0 10px #33FF33;
+            padding: 10px 5px 5px 5px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body id="bd">
+<div id="main" class="retro">
+    <p class="prompt line-12 anim-typewriter12">Hey, Sameen!</p>
+    <p class="prompt line-45 anim-typewriter45">Please enter password to access this service:</p>
+    <input type="password" id='in'>
+</div>
+<div id="welcome" class="retro"></div>
+<div id="secondary" class="retro"></div>
+<div id="meme" class="mono retro"></div>
+</body>
+<!-- <script src="./js/jquery.min.js"></script>-->
+<script src="../assets/vendor/jquery/jquery-3.5.1.min.js"></script>
+<script src="./js/main.js"></script>
+</html>

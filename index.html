@@ -11,30 +11,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Libs CSS -->
-  <link rel="stylesheet" href="assets/vendor/vegas/vegas.min.css">
+  <link rel="stylesheet" href="./assets/vendor/vegas/vegas.min.css">
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/fonts.css">
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="./assets/css/theme.css">
 
-  <link rel="icon" href="assets/images/favicon.svg">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/custom.css">
 
+  <!-- Favorites Icon -->
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="any" mask href="./assets/images/favicon.svg">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/2766bb6a87.js" crossorigin="anonymous"></script>
 
-  <style>
-    .content {
-      height: 200px;
-      width: 200px;
-      box-sizing: border-box;
-      margin: 10% auto;
-    }
 
-    #qrcode {
-      position: relative;
-    }
-  </style>
 </head>
 
 <body class="slide-website">
@@ -48,14 +43,13 @@
 
   <!-- Global Overlay -->
   <div class="overlay overlay-global">
-    <div class="overlay-inner kenburns-background vegas-container" style="height: 812px;">
+    <div class="overlay-inner kenburns-background vegas-container">
       <div class="vegas-slide vegas-transition-swirlLeft2 vegas-transition-swirlLeft2-in"
         style="transition: all 3000ms ease 0s;">
         <div class="vegas-slide-inner"
-          style="background-image: url(&quot;assets/images/background.svg&quot;); background-color: rgba(0, 0, 0, 0); background-position: center center; background-size: cover;">
+          style="background-image: url(&quot;./assets/images/background.svg&quot;); background-color: rgba(0, 0, 0, 0); background-position: center center; background-size: cover;">
         </div>
       </div>
-      <div class="vegas-wrapper" style="overflow: visible; padding: 0px;"></div>
     </div>
     <div class="overlay-inner bg-dark opacity-70"></div>
   </div>
@@ -73,8 +67,8 @@
     <div class="site-navbar-overlay bg-dark opacity-50"></div>
     <div class="container-xl flex-wrap">
       <div class="navbar-header justify-content-xl-center">
-        <a class="navbar-brand" href="https://www.sameen.cn/">
-          <img src="assets/images/logo-light.svg" alt="">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo-light.svg" alt="logo">
         </a>
         <button class="navbar-toggler-alternative" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -127,8 +121,8 @@
                 </h1>
                 <p class="h4 text-center font-light mb-7">So long lives this, and this gives life to thee. </p>
                 <a href="#about" class="btn btn-white mr-3 scrollto">Learn more</a>
-                <button type="button" class="btn btn-soft-white" data-toggle="modal"
-                  data-target="#contributeModal">Contribute</button>
+                <button type="button" class="btn btn-soft-white contact-btn" data-toggle="modal"
+                  data-target="#contactModal">Contact</button>
 
               </div>
             </div>
@@ -174,7 +168,7 @@
 
                     <p>who this website is by, know a little about building a website. I am similar to Sameen in some
                       ways, and some are not. By convention, there may be information you want to know in the
-                      <a href="terms" class="text-white"><u>Terms of Service</u></a>.
+                      <a href="./terms/" class="text-white"><u>Terms of Service</u></a>.
                     </p>
 
                   </div>
@@ -227,8 +221,8 @@
     </div>
   </footer>
 
-  <!-- Contribute Modal -->
-  <div class="modal fade" id="contributeModal" tabindex="-1" aria-labelledby="contributeAny" aria-hidden="true">
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contribution" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
 
@@ -241,156 +235,128 @@
         <!-- Modal Body -->
         <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
 
-          <h2 id="contributeAny" class="mb-4">Contact Us<br /> Make a Contribution</h2>
-          <p class="mb-8">If you want to contribute to this website and make it better, your help is very welcome. You
-            can send us feedback and suggestions via email.</p>
-          <div class="contribute-form">
-            <form id="cf" name="cf">
-              <div class="form-process"></div>
-              <div class="form-group">
-                <input type="email" id="cf-email" name="cf-email" placeholder="Developer's Email Address"
-                  class="form-control required" value="royoyy@hotmail.com">
-              </div>
-              <input type="text" id="cf-botcheck" name="cf-botcheck" value="" class="form-control d-none">
-              <button class="btn btn-primary btn-block" type="submit" id="cf-submit" name="cf-submit"
-                onclick="cp1()">Copy
-                Email</button>
-            </form>
-            <div class="contribute-form-result"></div>
+          <h2 id="contribution" class="mb-4">Contact Us<br /> Make a Contribution</h2>
+          <p class="mb-8">If you want to contribute to this website and make it better, your help is welcome. You can
+            give us feedback or suggestions via email.</p>
+          <div class="contact-form">
+
+            <div class="form-group">
+              <input type="email" placeholder="Contact Email Address" class="form-control required to-copy">
+            </div>
+            <button class="btn btn-primary btn-block write-btn" type="button">Copy to Clipboard</button>
+
           </div>
 
         </div>
-
       </div>
     </div>
-  </div>
 
-  <!-- QR code Modal -->
-  <div class="modal fade" id="QRcodeModal" tabindex="-1" role="dialog" aria-labelledby="scanqrcode" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+    <!-- QR code Modal -->
+    <div class="modal fade" id="QRcodeModal" tabindex="-1" role="dialog" aria-labelledby="scanqrcode"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
 
-        <button type="button"
-          class="btn btn-sm btn-icon btn-primary position-absolute top-0 right-0 mt-n3 mr-n3 zindex-1"
-          data-dismiss="modal" aria-hidden="true">
-          <i class="fas fa-times btn-icon-inner"></i>
-        </button>
+          <button type="button"
+            class="btn btn-sm btn-icon btn-primary position-absolute top-0 right-0 mt-n3 mr-n3 zindex-1"
+            data-dismiss="modal" aria-hidden="true">
+            <i class="fas fa-times btn-icon-inner"></i>
+          </button>
 
-        <!-- Modal Body -->
-        <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
+          <!-- Modal Body -->
+          <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
 
-          <h3 id="scanqrcode" class="mb-4">Scan the following QR code<span id='via'><br />via WeChat</span></h3>
-          <div id="content" class="content">
-            <div id="qrcode">
+            <h3 id="scanqrcode" class="mb-4">Scan the following QR code<span id='via'><br />via WeChat</span></h3>
+            <div id="content" class="content">
+              <div id="qrcode">
+
+              </div>
 
             </div>
 
           </div>
 
         </div>
-
       </div>
     </div>
-  </div>
 
-  <!-- Libs JS -->
-  <script src="assets/vendor/jquery/jquery-3.5.1.min.js"></script>
-  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.validate.min.js"></script>
-  <script src="assets/vendor/jquery.form/jquery.form.min.js"></script>
-  <script src="assets/vendor/vegas/vegas.min.js"></script>
-  <script src="assets/vendor/typed/typed.min.js"></script>
-  <script src="assets/vendor/qrcode.min.js"></script>
+    <!-- Libs JS -->
+    <script src="./assets/vendor/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/vegas/vegas.min.js"></script>
+    <script src="./assets/vendor/typed/typed.min.js"></script>
+    <script src="./assets/vendor/qrcode.min.js"></script>
 
-  <!-- Theme JS -->
-  <script src="assets/js/main.js"></script>
+    <!-- Theme JS -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/qr.js"></script>
 
-  <script>
-    // Slideshow Background
-    if ($('.overlay-global .overlay-inner').hasClass('kenburns-background')) {
-      var kenburnsDisplayBackdrops = false;
-      var kenburnsBackgrounds = [
-        { src: 'assets/images/background1.svg', valign: 'center' },
-        { src: 'assets/images/background2.svg', valign: 'center' },
-        { src: 'assets/images/background3.svg', valign: 'center' },
-        { src: 'assets/images/background2.svg', valign: 'center' }
-      ];
+    <script>
+      // Slideshow Background
+      if ($('.overlay-global .overlay-inner').hasClass('kenburns-background')) {
+        var kenburnsDisplayBackdrops = false;
+        var kenburnsBackgrounds = [
+          { src: './assets/images/background1.svg', valign: 'center' },
+          { src: './assets/images/background2.svg', valign: 'center' },
+          { src: './assets/images/background3.svg', valign: 'center' },
+          { src: './assets/images/background2.svg', valign: 'center' }
+        ];
 
-      $('.overlay-global .overlay-inner.kenburns-background').vegas({
-        preload: true,
-        transition: 'swirlLeft2',
-        transitionDuration: 3000,
-        firstTransition: 'none',
-        timer: false,
-        delay: 6000,
-        slides: kenburnsBackgrounds,
-        walk: function (nb) {
-          if (kenburnsDisplayBackdrops === true) {
-            var backdrop;
+        $('.overlay-global .overlay-inner.kenburns-background').vegas({
+          preload: true,
+          transition: 'swirlLeft2',
+          transitionDuration: 3000,
+          firstTransition: 'none',
+          timer: false,
+          delay: 6000,
+          slides: kenburnsBackgrounds,
+          walk: function (nb) {
+            if (kenburnsDisplayBackdrops === true) {
+              var backdrop;
 
-            backdrop = backdrops[nb];
-            backdrop.animation = 'kenburns';
-            backdrop.animationDuration = 10000;
-            backdrop.transition = 'fade';
-            backdrop.transitionDuration = 1000;
+              backdrop = backdrops[nb];
+              backdrop.animation = 'kenburns';
+              backdrop.animationDuration = 10000;
+              backdrop.transition = 'fade';
+              backdrop.transitionDuration = 1000;
 
-            $('.overlay-global .overlay-inner.kenburns-background')
-              .vegas('options', 'slides', [backdrop])
-              .vegas('next');
+              $('.overlay-global .overlay-inner.kenburns-background')
+                .vegas('options', 'slides', [backdrop])
+                .vegas('next');
+            }
           }
+        });
+      }
+    </script>
+
+    <script>
+      // Copy to Clipboard
+      const contactBtn = document.querySelector('.contact-btn');
+      const inputEl = document.querySelector('.to-copy');
+      contactBtn.addEventListener('click', () => {
+        inputEl.value = "contact@sameen.cn";
+      });
+      const writeBtn = document.querySelector('.write-btn');
+      // Async Clipboard API
+      writeBtn.addEventListener('click', () => {
+        const inputValue = inputEl.value.trim();
+        if (inputValue) {
+          navigator.clipboard.writeText(inputValue)
+            .then(() => {
+              if (writeBtn.innerText !== 'Copied!') {
+                const originalText = writeBtn.innerText;
+                writeBtn.innerText = 'Copied!';
+                setTimeout(() => {
+                  writeBtn.innerText = originalText;
+                }, 1500);
+              }
+            })
+            .catch(err => {
+              console.log('Something went wrong', err);
+            })
         }
       });
-    }
-  </script>
-
-  <script>
-    // Generate QR code
-    var url = window.location.href;
-    var qrcode = new QRCode(document.getElementById("qrcode"), {
-      text: url,
-      width: 200,
-      height: 200,
-      colorDark: "#000000",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H
-    });
-    url = encodeURIComponent(url)
-    var desc = encodeURIComponent("A website for girlfriend");
-    var title = encodeURIComponent("Shall I compare thee to a summer's day?");
-    var topic = encodeURIComponent("#Sonnet 18#")
-    var picurl = encodeURIComponent("https://www.sameen.cn/assets/images/share.png");
-    var ShareTip = function () { }
-    // Share via QQ
-    ShareTip.prototype.share2qq = function (url, title, desc, picurl) {
-      var shareurl = 'https://connect.qq.com/widget/shareqq/index.html?url=' + url + '&desc=' + desc + '&title=' + title + '&pics=' + picurl + '&style=201&width=32&height=32';
-      window.open(shareurl, "_blank", "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes");
-    }
-    // Share via Weibo
-    ShareTip.prototype.share2weibo = function (url, title, picurl) {
-      var shareurl = 'https://service.weibo.com/share/share.php?url=' + url + '&title=' + title + topic + '&pic=' + picurl;
-      window.open(shareurl, "_blank", "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes");
-    }
-    $(".a-qrcode").on("click", function () {
-      if ($("#via").length > 0) {
-        $("#scanqrcode").after("<p id='vias'>To scan this code, you can use a QR scanner app on your phone, or some camera apps.</p>");
-        $("#via").remove();
-      }
-    })
-    $(".a-weixin").on("click", function () {
-      if ($("#vias").length > 0) {
-        $("#scanqrcode").append("<span id='via'><br />via WeChat</span>");
-        $("#vias").remove();
-      }
-    })
-    $(".a-qq").on("click", function () {
-      var share = new ShareTip();
-      share.share2qq(url, title, desc, picurl);
-    })
-    $(".a-weibo").on("click", function () {
-      var share = new ShareTip();
-      share.share2weibo(url, title, picurl);
-    })
-  </script>
+    </script>
 
 </body>
 
