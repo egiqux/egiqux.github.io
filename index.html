@@ -250,113 +250,114 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- QR code Modal -->
-    <div class="modal fade" id="QRcodeModal" tabindex="-1" role="dialog" aria-labelledby="scanqrcode"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+  <!-- QR code Modal -->
+  <div class="modal fade" id="QRcodeModal" tabindex="-1" role="dialog" aria-labelledby="scanqrcode" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
 
-          <button type="button"
-            class="btn btn-sm btn-icon btn-primary position-absolute top-0 right-0 mt-n3 mr-n3 zindex-1"
-            data-dismiss="modal" aria-hidden="true">
-            <i class="fas fa-times btn-icon-inner"></i>
-          </button>
+        <button type="button"
+          class="btn btn-sm btn-icon btn-primary position-absolute top-0 right-0 mt-n3 mr-n3 zindex-1"
+          data-dismiss="modal" aria-hidden="true">
+          <i class="fas fa-times btn-icon-inner"></i>
+        </button>
 
-          <!-- Modal Body -->
-          <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
+        <!-- Modal Body -->
+        <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
 
-            <h3 id="scanqrcode" class="mb-4">Scan the following QR code<span id='via'><br />via WeChat</span></h3>
-            <div id="content" class="content">
-              <div id="qrcode">
-
-              </div>
+          <h3 id="scanqrcode" class="mb-4">Scan the following QR code<span id='via'><br />via WeChat</span>
+          </h3>
+          <div id="content" class="content">
+            <div id="qrcode">
 
             </div>
 
           </div>
 
         </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Libs JS -->
-    <script src="./assets/vendor/jquery/jquery-3.5.1.min.js"></script>
-    <script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="./assets/vendor/vegas/vegas.min.js"></script>
-    <script src="./assets/vendor/typed/typed.min.js"></script>
-    <script src="./assets/vendor/qrcode.min.js"></script>
+  <!-- Libs JS -->
+  <script src="./assets/vendor/jquery/jquery-3.5.1.min.js"></script>
+  <script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/vegas/vegas.min.js"></script>
+  <script src="./assets/vendor/typed/typed.min.js"></script>
+  <script src="./assets/vendor/qrcode.min.js"></script>
 
-    <!-- Theme JS -->
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/qr.js"></script>
+  <!-- Theme JS -->
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/qr.js"></script>
 
-    <script>
-      // Slideshow Background
-      if ($('.overlay-global .overlay-inner').hasClass('kenburns-background')) {
-        var kenburnsDisplayBackdrops = false;
-        var kenburnsBackgrounds = [
-          { src: './assets/images/background1.svg', valign: 'center' },
-          { src: './assets/images/background2.svg', valign: 'center' },
-          { src: './assets/images/background3.svg', valign: 'center' },
-          { src: './assets/images/background2.svg', valign: 'center' }
-        ];
+  <script>
+    // Slideshow Background
+    if ($('.overlay-global .overlay-inner').hasClass('kenburns-background')) {
+      var kenburnsDisplayBackdrops = false;
+      var kenburnsBackgrounds = [
+        { src: './assets/images/background1.svg', valign: 'center' },
+        { src: './assets/images/background2.svg', valign: 'center' },
+        { src: './assets/images/background3.svg', valign: 'center' },
+        { src: './assets/images/background2.svg', valign: 'center' }
+      ];
 
-        $('.overlay-global .overlay-inner.kenburns-background').vegas({
-          preload: true,
-          transition: 'swirlLeft2',
-          transitionDuration: 3000,
-          firstTransition: 'none',
-          timer: false,
-          delay: 6000,
-          slides: kenburnsBackgrounds,
-          walk: function (nb) {
-            if (kenburnsDisplayBackdrops === true) {
-              var backdrop;
+      $('.overlay-global .overlay-inner.kenburns-background').vegas({
+        preload: true,
+        transition: 'swirlLeft2',
+        transitionDuration: 3000,
+        firstTransition: 'none',
+        timer: false,
+        delay: 6000,
+        slides: kenburnsBackgrounds,
+        walk: function (nb) {
+          if (kenburnsDisplayBackdrops === true) {
+            var backdrop;
 
-              backdrop = backdrops[nb];
-              backdrop.animation = 'kenburns';
-              backdrop.animationDuration = 10000;
-              backdrop.transition = 'fade';
-              backdrop.transitionDuration = 1000;
+            backdrop = backdrops[nb];
+            backdrop.animation = 'kenburns';
+            backdrop.animationDuration = 10000;
+            backdrop.transition = 'fade';
+            backdrop.transitionDuration = 1000;
 
-              $('.overlay-global .overlay-inner.kenburns-background')
-                .vegas('options', 'slides', [backdrop])
-                .vegas('next');
-            }
+            $('.overlay-global .overlay-inner.kenburns-background')
+              .vegas('options', 'slides', [backdrop])
+              .vegas('next');
           }
-        });
-      }
-    </script>
-
-    <script>
-      // Copy to Clipboard
-      const contactBtn = document.querySelector('.contact-btn');
-      const inputEl = document.querySelector('.to-copy');
-      contactBtn.addEventListener('click', () => {
-        inputEl.value = "contact@sameen.cn";
-      });
-      const writeBtn = document.querySelector('.write-btn');
-      // Async Clipboard API
-      writeBtn.addEventListener('click', () => {
-        const inputValue = inputEl.value.trim();
-        if (inputValue) {
-          navigator.clipboard.writeText(inputValue)
-            .then(() => {
-              if (writeBtn.innerText !== 'Copied!') {
-                const originalText = writeBtn.innerText;
-                writeBtn.innerText = 'Copied!';
-                setTimeout(() => {
-                  writeBtn.innerText = originalText;
-                }, 1500);
-              }
-            })
-            .catch(err => {
-              console.log('Something went wrong', err);
-            })
         }
       });
-    </script>
+    }
+  </script>
+
+  <script>
+    // Copy to Clipboard
+    const contactBtn = document.querySelector('.contact-btn');
+    const inputEl = document.querySelector('.to-copy');
+    contactBtn.addEventListener('click', () => {
+      inputEl.value = "contact@sameen.cn";
+    });
+    const writeBtn = document.querySelector('.write-btn');
+    // Async Clipboard API
+    writeBtn.addEventListener('click', () => {
+      const inputValue = inputEl.value.trim();
+      if (inputValue) {
+        navigator.clipboard.writeText(inputValue)
+          .then(() => {
+            if (writeBtn.innerText !== 'Copied!') {
+              const originalText = writeBtn.innerText;
+              writeBtn.innerText = 'Copied!';
+              setTimeout(() => {
+                writeBtn.innerText = originalText;
+              }, 1500);
+            }
+          })
+          .catch(err => {
+            console.log('Something went wrong', err);
+          })
+      }
+    });
+  </script>
 
 </body>
 
