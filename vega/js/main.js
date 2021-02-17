@@ -136,7 +136,6 @@ $(function () {
                     $("#secondary").append("<p class='prompt-info'>exiting...<span id='dots'></span></p>");
                     for (let i = 0; i < 5; i++) {
                         (function (i) {
-                            //var backup = i;//定义个backup也可以暂存i值
                             setTimeout(function () {
                                 $("#dots").append("...");
                             }, i * 1000);
@@ -207,7 +206,7 @@ $(function () {
 });
 
 function download() {
-    let text = "弟弟行为gxq\n" +
+    let text = "弟弟行为\n" +
         "\n" +
         "\n" +
         "\n" +
@@ -284,7 +283,7 @@ function download() {
         "\n" +
         "\n" +
         "7777";
-    // 下载
+    // Download
     let element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', "passwd.txt");
