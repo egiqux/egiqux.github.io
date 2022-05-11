@@ -29,6 +29,14 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/2766bb6a87.js" crossorigin="anonymous"></script>
 
+  <!-- Noto Serif SC -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <style>
+      .zh-CN-f {
+          font-family: 'Noto Serif SC', serif;
+      }
+  </style>
 
 </head>
 
@@ -279,6 +287,28 @@
     </div>
   </div>
 
+  <!-- Last Modal -->
+  <div class="modal fade" id="LastModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <button type="button"
+          class="btn btn-sm btn-icon btn-primary position-absolute top-0 right-0 mt-n3 mr-n3 zindex-1"
+          data-dismiss="modal" aria-hidden="true">
+          <i class="fas fa-times btn-icon-inner"></i>
+        </button>
+
+        <!-- Modal Body -->
+        <div class="modal-body py-5 py-lg-10 px-5 px-lg-8 text-center">
+
+          <p class="zh-CN-f">好久不见</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- Libs JS -->
   <script src="./assets/vendor/jquery/jquery-3.5.1.min.js"></script>
   <script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
@@ -358,6 +388,9 @@
     });
   </script>
 
+  <script>
+    $('#LastModal').modal('show');
+  </script>
 </body>
 
 </html>
